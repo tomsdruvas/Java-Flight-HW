@@ -3,7 +3,7 @@ public enum RankType {
     LeadFlightAttendant(2),
     FligthAttendant(3);
 
-    private int rank;
+    private final int rank;
     RankType(int rank){
         this.rank = rank;
     }
