@@ -68,5 +68,9 @@ public class Flight {
         this.cabinCrewMembers.add(crewMember);
     }
 
+    public int getAvailableSeats(){
+        return this.plane.getPlaneType().getCapacity() - this.passengerListSize();
+    }
+
 
 }

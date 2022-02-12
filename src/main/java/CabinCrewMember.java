@@ -15,5 +15,9 @@ public class CabinCrewMember {
         return rank;
     }
 
+    public String relayMessage(){
+        return "We are all good";
+    }
+
 
 }

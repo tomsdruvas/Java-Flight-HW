@@ -27,6 +27,8 @@ class FlightTest {
         flight = new Flight("EDI", "GLA", "GLA47", "16:00", pilot, plane);
         flight.addCrewMemberToFlight(cabinCrewMember1);
         flight.addCrewMemberToFlight(cabinCrewMember2);
+        flight.addPassengerToFlight(passenger1);
+        flight.addPassengerToFlight(passenger2);
     }
 
     @Test
@@ -81,5 +83,19 @@ class FlightTest {
         flight.addPassengerToFlight(passenger3);
         assertEquals(3, flight.passengerListSize());
 
+    }
+
+    @Test
+    void testRemainingSeatsFree(){
+        assertEquals(98, flight.getAvailableSeats());
+    }
+
+    @Test
+    void pilotFlyingThePlane(){
+        assertEquals("I'm flying the plane", pilot.flyThePlane());
+    }
+    @Test
+    void testMessageToPassenger(){
+        assertEquals("We are all good", cabinCrewMember1.relayMessage());
     }
 }
