@@ -1,12 +1,10 @@
 public class CabinCrewMember {
     private String name;
     private RankType rank;
-    private String licenseNumb;
 
-    public CabinCrewMember(String name, RankType rank, String licenseNumb){
+    public CabinCrewMember(String name, RankType rank){
         this.name = name;
         this.rank = rank;
-        this.licenseNumb = licenseNumb;
     }
 
     public String getName() {
@@ -17,7 +15,5 @@ public class CabinCrewMember {
         return rank;
     }
 
-    public String getLicenseNumb() {
-        return licenseNumb;
-    }
+
 }
